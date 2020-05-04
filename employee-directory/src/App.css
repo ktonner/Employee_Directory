@@ -3,6 +3,10 @@
   color: white;
 }
 
+#searchboc{
+  left: 200px;
+}
+
 .App {
   text-align: center;
 }
