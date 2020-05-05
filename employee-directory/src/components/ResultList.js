@@ -7,7 +7,8 @@ function ResultList(props) {
   <thead>
     <tr>
       <th scope="col">Picture</th>
-      <th scope="col">Name</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
       <th scope="col">Age</th>
       <th scope="col">Email</th>
     </tr>
@@ -15,8 +16,9 @@ function ResultList(props) {
     <tbody>
       {props.results.map((result, i) => 
             <tr key={i}>
-            <td><img href= {result.picture.thumnail} alt={result.name.first}/></td>
+            <td><img src= {result.picture.large} alt={result.name.first}/></td>
             <td>{(result.name.first)}</td>
+            <td>{(result.name.last)}</td>
             <td>{result.dob.age}</td>
             <td>{result.email}</td>
           </tr>
@@ -24,7 +26,6 @@ function ResultList(props) {
       </tbody>
       </table>
   );
-  {console.log(props.results)}
 }
 
 export default ResultList;

@@ -14,7 +14,7 @@ class EmployeeContainer extends Component {
     componentDidMount() {
         API.getEmployees()
             .then(data => {
-                {console.log(data)}
+                // {console.log(data)}
                 this.setState({employees: data.data.results})
                 { console.log(this.state.employees) }
             })
