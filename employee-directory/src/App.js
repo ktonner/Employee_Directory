@@ -1,17 +1,15 @@
 import React from 'react';
 import './App.css';
+import Jumbotron from './components/Jumbotron'
+import EmployeeContainer from './components/EmployeeContainer'
 
-function Jumbotron() {
+function App() {
   return (
-    <div className="App">
-<div class="jumbotron jumbotron-fluid">
-  <div className="container">
-    <h1 className="display-4">Employee Directory</h1>
-    <p className="lead">Search through all your employees below.</p>
-  </div>
-</div>
+    <div>
+    <Jumbotron/>
+    <EmployeeContainer/>
     </div>
-  );
+  )
 }
 
-export default Jumbotron;
+export default App;
