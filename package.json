@@ -1,0 +1,22 @@
+{
+  "name": "employee_directory",
+  "version": "1.0.0",
+  "description": "For this assignment, you'll create a employee directory with React. This assignment will require you to break up your application's UI into components, manage component state, and respond to user events.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ktonner/Employee_Directory.git"
+  },
+  "author": "Kathleen Tonner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ktonner/Employee_Directory/issues"
+  },
+  "homepage": "https://github.com/ktonner/Employee_Directory#readme",
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
+}

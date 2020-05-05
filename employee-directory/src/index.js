@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Jumbotron from './App';
-import Search from './Search';
+import Search from './components/Search';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
