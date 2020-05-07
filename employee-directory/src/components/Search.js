@@ -9,10 +9,10 @@ function SearchForm(props) {
   id="search" 
   name="search"
   value={props.search}
-  onChange={props.handleInputChange}
   placeholder="Employee Name" 
   aria-label="Recipient's username" 
-  aria-describedby="button-addon2"/>
+  aria-describedby="button-addon2"
+  onChange = {props.onChange}/>
   <div className="input-group-append">
     <button className="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
   </div>

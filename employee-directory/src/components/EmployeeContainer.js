@@ -7,9 +7,25 @@ import "../index.css"
 class EmployeeContainer extends Component {
     state = {
         employees: [],
-        result: [],
+        filtered: [],
         search: ""
     };
+    
+  handleInputChange = event => {
+    // Getting the input and setting it to search dynamically
+    this.setState({search: event.target.value})
+    //filter the array of employees by search
+    const searchString = (this.state.search).toLowerCase();
+    const oldList = this.state.employees
+    const newList = oldList.filter(employee=>{
+      return ((employee.name.first.toLowerCase()).includes(searchString) ||
+      (employee.name.last.toLowerCase()).includes(searchString)
+      )
+    })
+    this.setState({filtered: newList})
+    console.log(newList)
+  };
+
 
     componentDidMount() {
         API.getEmployees()
@@ -29,7 +45,7 @@ class EmployeeContainer extends Component {
                 <SearchForm
                     search={this.state.search}
                     handleFormSubmit={this.handleFormSubmit}
-                    handleInputChange={this.handleInputChange}
+                    onChange={this.handleInputChange}
                 />
                 <ResultList results={this.state.employees} />
             </div>
